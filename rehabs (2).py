@@ -5,6 +5,24 @@ import requests
 from bs4 import BeautifulSoup, Tag
 from requests import TooManyRedirects
 
+all_urls = [
+    "https://sobernation.com/rehabs/",
+    "https://rehabs.com/local/",
+    "https://www.treatmentcentersdirectory.com/",
+    "https://www.naatp.org/resources/addiction-industry-directory",
+    "https://alcohol.org/alcohol-rehabs/",
+    "https://drugrehabus.org/#statesnav",
+    "https://www.detoxlocal.com/detox-centers",
+    "https://yourfirststep.org/find-local-treatment-centers/",
+    "https://www.addictioncenter.com/rehabs/",
+    "https://www.alltreatment.com/",
+    "https://www.addicted.org/directory.html",
+    "https://luxuryrehabs.com/",
+    "https://oasas.ny.gov/addiction-treatment-centers",
+]
+states = [
+    "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Minor Outlying Islands", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "U.S. Virgin Islands", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+]
 
 def get_soup(_session: requests.Session, _url: str) -> BeautifulSoup:
     try:
